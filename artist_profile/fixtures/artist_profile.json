@@ -1,0 +1,46 @@
+[
+    {
+        "model": "artist_profile.ArtistProfile",
+        "pk": 2,
+        "fields": {
+            "artist_username": "MrBristles",
+            "artist_first_name": "Brock",
+            "artist_last_name": "Valley",
+            "artist_email": "midnightsong@gmail.com",
+            "artist_profile_pic": "http://www.starcentralmagazine.com/wp-content/uploads/2012/06/Christian2.jpg",
+            "artist_genres": "Oil Paints",
+            "artist_description": "I love to paint cats.",
+            "created_at": "2018-09-22 00:00:00"
+        }
+    },
+
+    {
+        "model": "artist_profile.Art",
+        "pk": 3,
+        "fields": {
+            "art_title": "Mr. Whiskers",
+            "art_description": "8\" x 5\"",
+            "art_completion_date": "January 2018",
+            "medium": "Watercolor, Canvas",
+            "art_image": "https://i0.wp.com/anters.org/wp-content/uploads/2018/02/wcn012_00.jpg?resize=800%2C510&ssl=1",
+            "file_type": "jpg",
+            "created_at": "2018-09-20T00:00:00",
+            "artist": 2
+        }
+    },
+
+    {
+        "model": "artist_profile.Art",
+        "pk": 4,
+        "fields": {
+            "art_title": "Mr. Sniffles",
+            "art_description": "6\" x 4.6\"",
+            "art_completion_date": "March 2018",
+            "medium": "Acrylic, Canvas",
+            "art_image": "https://i1.wp.com/i.pinimg.com/736x/ff/ef/eb/ffefebed30875622f282c2e3d0e0e39d--cat-paintings-big-eyes.jpg?resize=618%2C464&ssl=1",
+            "file_type": "jpg",
+            "created_at": "2018-08-20T00:00:00",
+            "artist": 2
+        }
+    }
+]
