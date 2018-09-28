@@ -7,12 +7,12 @@ describe("Django REST framework / React quickstart app", () => {
         art_image: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/never-alone-sharon-cummings.jpg",
         file_type: "jpg",
         created_at: "2018-09-27T00:00:00",
-        artist: 1
+        artist: "1"
     };
 
     before(() => {
         cy.exec("npm run dev");
-        cy.exec("npm run flush");
+        //cy.exec("npm run flush");
     });
 
     it("should be able to fill a web form", ()=>{
@@ -24,7 +24,7 @@ describe("Django REST framework / React quickstart app", () => {
             .should("have.value", art.art_title);
 
         cy
-            .get('input[name="art_description"]')
+            .get('textarea[name="art_description"]')
             .type(art.art_description)
             .should("have.value", art.art_description);
 
@@ -60,6 +60,11 @@ describe("Django REST framework / React quickstart app", () => {
 
         cy.get("form").submit();
 
+    });
+
+    it("should be able to see the table", () => {
+        cy.visit("/");
+        cy.get("tr").contains(`${art.art_title}${art.art_description}${art.art_completion_date}${art.medium}${art.art_image}${art.file_type}${art.created_at}${art.artist}`);
     });
 
     //more tests here

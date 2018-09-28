@@ -31,4 +31,5 @@ const Table = ({ data }) =>
 Table.propTypes = {
   data: PropTypes.array.isRequired
 };
+
 export default Table;
