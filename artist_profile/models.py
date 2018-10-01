@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Create your models here. (model is an object representing the table's data)
 
 class ArtistProfile(models.Model):
     artist_username = models.CharField(max_length=20)

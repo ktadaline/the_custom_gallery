@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import key from "weak-key";
 
+//a stateless component for displaying data within a table
 
 const Table = ({ data }) =>
   !data.length ? (
@@ -11,6 +12,7 @@ const Table = ({ data }) =>
       <h2 className="subtitle">
         Showing <strong>{data.length} items</strong>
       </h2>
+
       <table className="table is-striped">
         <thead>
           <tr>

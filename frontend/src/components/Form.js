@@ -23,8 +23,8 @@ class Form extends Component {
 
    handleSubmit = e => {
     e.preventDefault();
-    const { art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist  } = this.state;
-    const art = { art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist };
+    const {art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist} = this.state;
+    const art = {art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist};
     const conf = {
       method: "post",
       body: JSON.stringify(art),
@@ -34,7 +34,7 @@ class Form extends Component {
   };
 
   render() {
-    const { art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist  } = this.state;
+    const {art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist} = this.state;
     return (
       <div className="column">
         <form onSubmit={this.handleSubmit}>

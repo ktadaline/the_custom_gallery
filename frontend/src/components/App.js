@@ -7,7 +7,7 @@ import Form from "./Form";
 const App = () => (
     <React.Fragment>
         <DataProvider endpoint="api/art/"
-                render={data => <Table data={data} />} />
+                render={data => <Table data={data}/>}/>
         <Form endpoint="api/art/" />
     </React.Fragment>
 );

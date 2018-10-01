@@ -16,9 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from rest_framework.urlpatterns import format_suffix_patterns
+from artist_profile import views
+
+#wire up ArtistProfileListCreate and ArtListCreate to api/artist/ and api/art/
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('artist_profile.urls')),
     path('', include('frontend.urls')),
+    path('artists_/', views.Artist_List.as_view(), name='artists_'),
+    path('art_/', views.Art_List.as_view(), name='art_'),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

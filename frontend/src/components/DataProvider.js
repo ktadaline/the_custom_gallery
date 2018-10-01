@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+//a stateful component for fetching data
+
 class DataProvider extends Component {
   static propTypes = {
     endpoint: PropTypes.string.isRequired,
@@ -25,8 +27,9 @@ class DataProvider extends Component {
   }
 
   render() {
-    const { data, loaded, placeholder } = this.state;
+    const {data, loaded, placeholder} = this.state;
     return loaded ? this.props.render(data) : <p>{placeholder}</p>;
   }
 }
+
 export default DataProvider;
