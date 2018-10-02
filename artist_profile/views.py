@@ -8,7 +8,7 @@ from artist_profile.models import Art
 from artist_profile.serializers import ArtistProfileSerializer
 from artist_profile.serializers import ArtSerializer
 from rest_framework import generics
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 #Lists all art/artists or creates a new one
 # artists_/
@@ -39,6 +39,7 @@ class Art_List(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #Creates a view for handling GET and POST
+
 class ArtistProfileListCreate(generics.ListCreateAPIView):
     queryset = ArtistProfile.objects.all()
     serializer_class = ArtistProfileSerializer

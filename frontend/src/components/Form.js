@@ -37,7 +37,7 @@ class Form extends Component {
     const {art_title, art_description, art_completion_date, medium, art_image, file_type, created_at, artist} = this.state;
     return (
       <div className="column">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} method="post">
           <div className="field">
             <label className="label">art_title</label>
             <div className="control">
