@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'frontend',
     'rest_auth',
     'django.contrib.sites',
+    'allauth',
     'allauth.account',
     'rest_auth.registration',
 ]
@@ -77,6 +78,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'the_custom_gallery.wsgi.application'
 
+#email server console instead of smtp
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
