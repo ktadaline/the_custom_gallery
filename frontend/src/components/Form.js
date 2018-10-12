@@ -28,7 +28,7 @@ class Form extends Component {
     const conf = {
       method: "post",
       body: JSON.stringify(art),
-      headers: new Headers({ "Content-Type": "application/json", "Authorization: Token 6b929e47f278068fe6ac8235cda09707a3aa7ba1" })
+      headers: new Headers({ "Content-Type": "application/json", "Authorization": "JWT YOUR_TOKEN_HERE",})
     };
     fetch(this.props.endpoint, conf).then(response => console.log(response));
   };
